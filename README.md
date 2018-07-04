@@ -15,6 +15,14 @@ docker-compose up -d
 docker-compose stop
 ```
 
+### 実行
+
+```
+php artisan serve
+```
+
+- `localhost:8000`にアクセス
+
 ## 初回
 
 ### 依存モジュールのインストール
