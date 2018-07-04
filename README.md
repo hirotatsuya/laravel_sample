@@ -1,6 +1,10 @@
 laravel_sample
 ===================
 
+## Requirements
+- laravel 5.6.26
+    - see `php artisan --version`
+
 ## Usage
 
 ### ローカルDB & laravelの起動
