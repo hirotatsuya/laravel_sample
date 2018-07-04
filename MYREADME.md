@@ -71,6 +71,9 @@ MY README
     - php artisan db:seed
 - 実行
     - php artisan serve
+- php artisan cache:clear
+- composer dump-autoload
+    - 綺麗にする
 
 ### やること
 - まず、dockerを立ち上げる
