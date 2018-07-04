@@ -27,4 +27,6 @@ Route::get('/hello_controller', 'HelloController@getIndex');
 
 Route::get('/input', 'InputController@getIndex');
 
-Route::post('/inputa', 'InputController@postIndex');
+Route::post('/input', 'InputController@postIndex');
+
+Route::get('/query', 'InputController@getQuery');

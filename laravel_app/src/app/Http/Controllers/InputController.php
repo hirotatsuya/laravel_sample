@@ -17,4 +17,9 @@ class InputController extends Controller
         $res = "you typed: " . $request->input('str');
         return view('input', ['message' => $res]);
     }
+    public function getQuery(Request $request)
+    {
+        $res = 'ID : ' . $request->id;
+        return view('input', ['message' => $res]);
+    }
 }
