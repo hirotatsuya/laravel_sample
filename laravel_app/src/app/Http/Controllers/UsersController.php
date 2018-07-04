@@ -22,4 +22,12 @@ class UsersController extends Controller
         ]);
         return view('user', ['message' => 'ユーザを追加しました']);
     }
+    public function selectUsers(Request $request)
+    {
+        // $target = $request->input('id');
+        // $user = DB::select('select * from users where id = :id', ['id' => $target]);
+        $users = DB::select('select * from users');
+        // return view('show_users', ['user' => $user, 'users' => $users]);
+        return view('show_users', ['users' => $users]);
+    }
 }

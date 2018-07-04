@@ -35,3 +35,5 @@ Route::get('/gotohello', 'InputController@gotoHello');
 
 Route::get('/user', 'UsersController@getIndex');
 Route::post('/user', 'UsersController@insert');
+
+Route::get('/show_users', 'UsersController@selectUsers');
