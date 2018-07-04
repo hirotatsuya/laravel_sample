@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/hello', function () {
     return '<html><body><h1>Hello World</h1><p>this is sample page.</p></body></html>';
 });
+
+Route::get('/hello_message', function () {
+    return view('hello',['message' => 'Hello!']);
+});
