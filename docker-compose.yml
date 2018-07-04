@@ -1,0 +1,28 @@
+version: '3.1'
+services:
+  laravel_app:
+    build: ./laravel_app
+    container_name: laravel_app
+    ports:
+      - 80:80
+      - 443:443
+      - 8000:8000
+    restart: always
+    environment:
+      TZ: Asia/Tokyo
+      COMPOSER_PROCESS_TIMEOUT: 2000
+    links:
+      - laravel_db
+    volumes:
+      - ./laravel_app/src:/var/www/html
+
+  laravel_db:
+    build: ./laravel_db
+    container_name: laravel_db
+    ports:
+      - 13306:3306
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: laravel_db
+      TZ: Asia/Tokyo
