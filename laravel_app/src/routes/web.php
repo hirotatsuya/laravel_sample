@@ -24,3 +24,7 @@ Route::get('/hello_message', function () {
 });
 
 Route::get('/hello_controller', 'HelloController@getIndex');
+
+Route::get('/input', 'InputController@getIndex');
+
+Route::post('/inputa', 'InputController@postIndex');
