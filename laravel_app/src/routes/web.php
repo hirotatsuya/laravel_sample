@@ -22,3 +22,5 @@ Route::get('/hello', function () {
 Route::get('/hello_message', function () {
     return view('hello',['message' => 'Hello!']);
 });
+
+Route::get('/hello_controller', 'HelloController@getIndex');
