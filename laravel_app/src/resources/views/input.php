@@ -14,4 +14,5 @@
         <input type="text" name="str">
         <input type="submit">
     </form>
+    <a href="/gotohello">gotohello</a>
 </body>

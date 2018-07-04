@@ -22,4 +22,8 @@ class InputController extends Controller
         $res = 'ID : ' . $request->id;
         return view('input', ['message' => $res]);
     }
+    public function gotoHello(Request $request)
+    {
+        return redirect()->action('HelloController@getIndex');
+    }
 }

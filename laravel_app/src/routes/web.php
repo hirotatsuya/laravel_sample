@@ -30,3 +30,5 @@ Route::get('/input', 'InputController@getIndex');
 Route::post('/input', 'InputController@postIndex');
 
 Route::get('/query', 'InputController@getQuery');
+
+Route::get('/gotohello', 'InputController@gotoHello');
