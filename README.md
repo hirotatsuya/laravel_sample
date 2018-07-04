@@ -4,6 +4,8 @@ laravel_sample
 ## Requirements
 - laravel 5.6.26
     - see `php artisan --version`
+- mysql 5.7.x
+    - access `mysql -u root -p -P 13306 -h 192.168.99.100`
 
 ## Usage
 
@@ -12,6 +14,20 @@ laravel_sample
 ```
 docker-compose up -d
 ```
+
+### コンテナに入る
+
+```
+docker-compose exec laravel_app bash
+```
+
+- laravelコンテナ
+
+```
+docker-compose exec laravel_db bash
+```
+
+- dbコンテナ
 
 ### 停止
 
