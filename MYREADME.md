@@ -20,7 +20,7 @@ MY README
     - 環境変数の確認
 
 ## docker
--  docker ps
+- docker ps
     - コンテナ起動確認
 - docker ps -a
     - 停止中のコンテナも表示
@@ -30,10 +30,12 @@ MY README
     - コンテナ削除
 - docker network ls
     - dockerのネットワーク確認
--  docker network inspect ネットワーク名
+- docker network inspect ネットワーク名
     - ネットワーク情報確認(idアドレス確認)
 - docker exec -it コンテナID /bin/bash
     - コンテナに入る
+- docker images
+    - イメージ一覧
 
 ## docker-compose
 - docker-compose up -d
@@ -55,6 +57,15 @@ MY README
 - apt-get install iputils-ping net-tools
     - pingのインストール
 
+### やること
+- まず、dockerを立ち上げる
+    - docker-machine start
+- 環境変数を確認してパスを通す
+    - docker-machine env
+    - eval (docker-machine env)
+- コンテナの起動(Dockfileを編集したときのみ--buildをする)
+    - docker-compose up -d --build
+
 ## php
 - 依存モジュールをインストール
     - composer install
@@ -66,20 +77,11 @@ MY README
     - mkidir migrations
         - フォルダ作成
     - php artisan make:migration create_user_table
-        - migrationファイルの作成
+        - migrationファイルの作成(ex: userテーブル)
 - 初期データ注入
     - php artisan db:seed
 - 実行
     - php artisan serve
-- php artisan cache:clear
-- composer dump-autoload
-    - 綺麗にする
-
-### やること
-- まず、dockerを立ち上げる
-    - docker-machine start
-- 環境変数を確認してパスを通す
-    - docker-machine env
-    - eval (docker-machine env)
-- コンテナの起動(Dockfileを編集したときのみ--buildをする)
-    - docker-compose up -d --build
+- 綺麗にするやつ
+    - php artisan cache:clear
+    - composer dump-autoload
