@@ -66,7 +66,7 @@ MY README
 - コンテナの起動(Dockfileを編集したときのみ--buildをする)
     - docker-compose up -d --build
 
-## php
+## PHP(実行)
 - 依存モジュールをインストール
     - composer install
 - .envのAPI_KEYが埋まる
@@ -85,3 +85,14 @@ MY README
 - 綺麗にするやつ
     - php artisan cache:clear
     - composer dump-autoload
+
+## PHP(開発)
+- php artisan migrate
+    - テーブルの作成
+    - database/migrationsにあるテーブル定義を流しこむ
+- php artisan make:seeder UsersTableSeeder
+    - database/seedsにSeederクラスを生成する
+- php artisan db:seed
+    - 初期データ注入
+- php artisan make:controller LoginController
+    - 新しいコントローラーの作成
